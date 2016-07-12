@@ -1,0 +1,60 @@
+# CB-Mod-BL.conkyrc
+#
+# CrunchBang conky modified and then modified again for BunsenLabs.
+
+alignment top_right
+background yes
+cpu_avg_samples 2
+default_color b2b2b2
+double_buffer yes
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 10
+gap_y 9
+maximum_width 122
+minimum_size 122 445
+no_buffers yes
+override_utf8_locale no
+own_window yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_type override
+short_units yes
+total_run_times 0
+update_interval 3.0
+uppercase no
+use_xft yes
+xftalpha 1
+xftfont Monospace:size=9.5
+
+TEXT
+${voffset 55}${alignc}${color #729FCF}${exec uname -r}${color}
+
+UTC:${alignr}${utime %X}
+
+CPU: ${alignr}${if_match ${cpu cpu0} > 84}${color #FC7990}${cpu cpu0}%${color}${else}${cpu cpu0}%${endif}
+RAM: ${mem}${alignr}${if_match ${memperc} > 74}${color #FC7990}${memperc}%${color}${else}${memperc}%${endif}
+HDD: ${fs_used /}${alignr}${if_match ${fs_used_perc /} > 89}${color #FC7990}${fs_used_perc /}%${color}${else}${fs_used_perc /}%${endif}
+USB: ${if_empty ${exec df -h | grep "/dev/sdb"}}0B${alignr}0%${else}${exec df -h | grep "/dev/sdb" | awk '{ printf $3}' }${alignr}${exec df -h | grep "/dev/sdb" | awk '{ printf $5}' }${endif}
+
+#TX: ${upspeed eth0}${alignr}${totalup eth0}
+#RX: ${downspeed eth0}${alignr}${totaldown eth0}
+
+${alignc}${color #729FCF}Shortcut Keys${color}
+
+A-F2${alignr}Run
+A-F3${alignr}dmenu
+W-Spc${alignr}Menu
+W-Tb${alignr}Desktops
+W-T${alignr}Terminal
+W-F${alignr}Files
+W-E${alignr}Editor
+W-M${alignr}Media
+W-W${alignr}WWW
+W-H${alignr}htop
+W-C${alignr}Calendar
+W-V${alignr}Volume
+W-L${alignr}Lock
+W-X${alignr}Logout
