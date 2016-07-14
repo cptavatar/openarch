@@ -60,8 +60,8 @@ function parse_git_branch() {
 export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
-export CONF_DIR="~/Projects/openarch"
+export CONF_DIR="/home/alex/Projects/openarch"
 
-alias confdif='diff -r $CONF_DIR/conf/ ~/ | grep -v "Only in /home/alex*"'
-alias editconf='atom $CONF_DIR/; atom ~/'
-alias instconf='$CONF_DIR/install.sh'
+alias confdiff='diff -r $CONF_DIR/conf/ ~/ | grep -v "Only in /home/alex*"'
+alias confedit='atom $CONF_DIR/; atom ~/'
+alias confinstall='$CONF_DIR/install.sh'
