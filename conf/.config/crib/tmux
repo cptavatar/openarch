@@ -1,0 +1,4 @@
+enter cmds	C-a
+Horiz split	"
+Vert split	%
+scroll-mode	C-a [ , q to quit

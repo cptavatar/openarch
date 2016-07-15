@@ -1,0 +1,3 @@
+<C-x> g start c c commit (followed by <C-c><C-c>)
+n p up/down   P P push
+s stage	      F F pull

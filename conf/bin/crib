@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# crib - a simple way to have an array of organized short notes
+# just a few keystrokes away.
+
+# 1) add notes to .dotfiles/crib/
+# 2) crib note_name will just cat out its content where ever you are in the path.
+# 3) crib with no parameters will remind you whats available.
+
+
+CRIB_HOME=~/.dotfiles/crib
+
+case "$#" in
+
+0)   ls $CRIB_HOME
+     ;;
+1)   cat $CRIB_HOME/$1
+     ;;
+*)   echo "Do I look psychic to you?"
+     ;;
+esac

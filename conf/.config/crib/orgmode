@@ -1,0 +1,3 @@
+M-right increase depth,toggles todo	M-up change tree order
+C-c C-c checkbox toggle	       		M-<ret> new item at current level
+M-<shift-ret> new checkbox 			

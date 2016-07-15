@@ -1,0 +1,4 @@
+C-x <l/r> chg buffer C-x o other window
+C-x 2/3   hor/vert   C-x s save all
+C-x C-w  save as     C-M-\ indent region
+C-x h    select all  C-x k (b) kill (select) buf

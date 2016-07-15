@@ -1,0 +1,8 @@
+gg first line     <c>u up 
+b back            <c>d down
+e end 		  * #, / ? search 
+( begin sentance  y yy copy 
+{ begin para 	  p P paste
+i I a A insert	  :!cmd !!cmd run, optionally insert
+% paren match	  [[ fun start
+:%s/foo/bar/gi s/replace global/insensitive
